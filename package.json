@@ -1,0 +1,16 @@
+{
+    "name": "42iCodeChallenge",
+    "version": "1.0.0",
+    "description": "nodejs image demo",
+    "author": "Miguel Gudiño <miguel.lpz.g95@gmail.com>",
+    "license": "MIT",
+    "main": "app.js",
+    "keywords": [
+      "nodejs",
+      "bootstrap",
+      "express"
+    ],
+    "dependencies": {
+      "express": "^4.16.4"
+    }
+  }
