@@ -19,14 +19,9 @@ function App() {
         <p>
           {message}
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1 className="text-3xl font-bold underline">
+          Hello world!
+        </h1>
       </header>
     </div>
   );
