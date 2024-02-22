@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
+
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001';
 
 const NonConstructibleChange = () => {
     const [numbers, setNumbers] = useState('');
@@ -31,7 +33,7 @@ const NonConstructibleChange = () => {
         if (arrayNumberError)
             return;
         try {
-            const response = await fetch('http://localhost:3001/non-constructible-change', {
+            const response = await fetch(API_URL + '/non-constructible-change', {
                 method: 'POST',
                 body: JSON.stringify({ arrayNumbers }),
                 headers: { 'content-type': 'application/json;charset=utf-8' },

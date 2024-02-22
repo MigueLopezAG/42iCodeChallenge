@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001';
 
 const TwoNumberSum = () => {
     const [numbers, setNumbers] = useState('');
@@ -40,7 +41,7 @@ const TwoNumberSum = () => {
         if (targetSumError || arrayNumberError)
             return;
         try {
-            const response = await fetch('http://localhost:3001/two-number-sum', {
+            const response = await fetch(API_URL + '/two-number-sum', {
                 method: 'POST',
                 body: JSON.stringify({ arrayNumbers, targetSum }),
                 headers: { 'content-type': 'application/json;charset=utf-8' },
