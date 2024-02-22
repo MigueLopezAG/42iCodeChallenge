@@ -90,16 +90,21 @@ const TwoNumberSum = () => {
                     Validar
                 </button>
                 {apiResponse !== '' && (<>
-                    <h3 className="text-xl mb-8 text-center mt-6">Estas son las posibles combinaciones dentro del array que su suma dan como resultado el numero: {targetSum}</h3>
-                    <ul className="divide-y divide-gray-200">
-                    {apiResponse.map((e, index) => (
-                        <li key={index} className="py-4">
-                            <div className="flex justify-center">
-                            <span className="text-xl text-gray-800 mr-4">{e.num1}{' + '}{e.num2}{' = '}{targetSum}</span>
-                            </div>
-                        </li>
-                    ))}
-                    </ul>
+                    {apiResponse.length === 0 ? (
+                        <h3 className="text-xl mb-8 text-center mt-6">NO se encontraron combinaciones que den como resultado el numero ingresado</h3>
+                    ):(<>
+                        <h3 className="text-xl mb-8 text-center mt-6">Estas son las posibles combinaciones dentro del array que su suma dan como resultado el numero: {targetSum}</h3>
+                        <ul className="divide-y divide-gray-200">
+                        {apiResponse.map((e, index) => (
+                            <li key={index} className="py-4">
+                                <div className="flex justify-center">
+                                <span className="text-xl text-gray-800 mr-4">{e.num1}{' + '}{e.num2}{' = '}{targetSum}</span>
+                                </div>
+                            </li>
+                        ))}
+                        </ul>
+                        </>
+                    )}
                 </>)}
             </div>
         </div>
