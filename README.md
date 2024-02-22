@@ -21,9 +21,8 @@ Para ejecutar este proyecto con docker como primer paso debemos clonanar este re
 
   Ahora solo debemos correr el comando
     docker-compose up
-  Y esperar aque en nuestra terminal nos arroje un mensaje como el siguiente. o se haya terminado de montar las aplicacions:
 
-![image](https://github.com/MigueLopezAG/42iCodeChallenge/assets/68519378/bdba24d9-2f2a-46bd-8d49-5c525e7f75d8)
+  Y esperar hasta que se haya terminado de montar las aplicaciones
 
  
   ```
